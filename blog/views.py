@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic.base import View
 from .models import Post
 from django.views.generic import ListView, DetailView
-
+from .forms import CommentForm
 
 # class views for starting page
 class StartingPageView(ListView):
@@ -26,6 +26,7 @@ class AllPosts(ListView):
     ordering = ["-date"]
     context_object_name = "all_posts"
 
+
 #class view for post detail
 class PostDetailView(DetailView):
     template_name = "blog/post-detail.html"
@@ -34,4 +35,6 @@ class PostDetailView(DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context["post_tags"] = self.object.tags.all()
+        context["comment_form"] = CommentForm()
         return context
+
