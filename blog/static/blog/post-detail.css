@@ -114,3 +114,38 @@ main {
     border: 1px solid #ccc;
 }
 
+.errorlist{
+    list-style: none;
+    margin: 0.5rem 0;
+    padding: 0;
+    color: rgb(221, 18, 18);
+}
+
+.invalid label{
+    color: red;
+}
+
+.invalid input,
+.invalid textarea{
+    border-color: #d6000b;
+    background-color: #ffe6e7;
+}
+
+#alert{
+    margin: 8rem auto 3rem auto;
+    border: 1px solid #d6000b;
+    background-color: #ffe6e7;
+    padding: 1rem;
+    width: 90%;
+    max-width: 40rem;
+}
+
+#alert a{
+    text-decoration: none;
+    border: 1px solid #d6000b;
+    background-color: #d6000b;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+
+}
