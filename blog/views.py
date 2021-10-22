@@ -7,7 +7,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 
-# class views for starting page
+# class view for starting page
 class StartingPageView(ListView):
     template_name = "blog/index.html"
     model = Post
